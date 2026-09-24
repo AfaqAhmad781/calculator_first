@@ -1,3 +1,4 @@
+import 'package:calculator_app_build/components/my_button.dart';
 import 'package:calculator_app_build/constants.dart';
 import 'package:flutter/material.dart';
 
@@ -14,17 +15,35 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: true,
       home: Scaffold(
         body: SafeArea(
-          child: Column(
-            children: [
-              Text('Building Calculator from scratch' , style: TextStyle(fontSize: 25, color: tealColor), ),
-              Text('Building Calculator from scratch' , style: TextStyle(fontSize: 25, color: tealColor), ),
-              Text('Building Calculator from scratch' , style: TextStyle(fontSize: 25, color: tealColor), ),
-              Text('Building Calculator from scratch' , style: TextStyle(fontSize: 25, color: tealColor), ),
-              Text('Building Calculator from scratch' , style: TextStyle(fontSize: 25, color: tealColor), ),
-            ],
-          )
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10),
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    MyButton(title: 'AC',
+                    onPress: (){
+                      print('Afaq Pressed the button');
+                    }
+                    ),
+                    MyButton(title: '+/-',
+                    onPress: (){
+                      print('TApped +/- button');
+                    },
+                    ),
+                    MyButton(title: '%',
+                    onPress: (){},
+                    ),
+                    MyButton(title: '/' ,
+                    onPress: (){},
+                    color: Colors.orange,),
+                  ],
+                )
+              ],
+            ),
+          ) 
         )
-      ),
+      )
     );
   }
 }
