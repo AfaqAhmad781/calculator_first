@@ -1,5 +1,4 @@
-import 'package:calculator_app_build/components/my_button.dart';
-import 'package:calculator_app_build/constants.dart';
+import 'package:calculator_app_build/home_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,37 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: true,
-      home: Scaffold(
-        body: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10),
-            child: Column(
-              children: [
-                Row(
-                  children: [
-                    MyButton(title: 'AC',
-                    onPress: (){
-                      print('Afaq Pressed the button');
-                    }
-                    ),
-                    MyButton(title: '+/-',
-                    onPress: (){
-                      print('TApped +/- button');
-                    },
-                    ),
-                    MyButton(title: '%',
-                    onPress: (){},
-                    ),
-                    MyButton(title: '/' ,
-                    onPress: (){},
-                    color: Colors.orange,),
-                  ],
-                )
-              ],
-            ),
-          ) 
-        )
-      )
+      home: HomeScreen()
     );
   }
 }
