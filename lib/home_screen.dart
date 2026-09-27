@@ -116,10 +116,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 25),
-                  child: Expanded(
-                    flex: 2,
+                Expanded(
+                  flex: 2,
+                  child: Padding(
+                     padding: const EdgeInsets.symmetric(vertical: 25),
                     child: Column(
                       children: [
                         Row(
@@ -289,7 +289,9 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                         MyButton(title: 'DEL',
                         onPress: (){
+                          if (userInput.isNotEmpty) {
                           userInput = userInput.substring(0, userInput.length -1 );
+                          }
                           setState(() {
                             
                           });
