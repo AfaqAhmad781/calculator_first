@@ -104,9 +104,6 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                           ),
                         ),
-                        // SizedBox(
-                        //   height: 10,
-                        // ),
                         Text(answer.toString(),
                         style: TextStyle(
                           fontSize: 30, fontWeight: FontWeight.w100 , color: Colors.white, fontStyle: FontStyle.italic
@@ -122,190 +119,200 @@ class _HomeScreenState extends State<HomeScreen> {
                      padding: const EdgeInsets.symmetric(vertical: 25),
                     child: Column(
                       children: [
-                        Row(
-                      children: [
-                        MyButton(title: 'AC',
-                        onPress: (){
-                          userInput = '';
-                          answer = '' ;
-                          setState(() {
-                            
-                          });
-                        }
-                        ),
-                        MyButton(title: '+/-',
-                        onPress: (){
-                          userInput += '+/-' ;
-                          setState(() {
-                            
-                          });
-                        },
-                        ),
-                        MyButton(title: '%',
-                        onPress: (){
-                          userInput += '%' ;
-                          setState(() {
-                            
-                          });
-                        },
-                        ),
-                        MyButton(title: '/' ,
-                        color: Colors.orange,
-                        onPress: (){
-                          userInput += '/' ;
-                          setState(() {
-                            
+                    Expanded(
+                      child: Row(
+                        children: [
+                          MyButton(title: 'AC',
+                          onPress: (){
+                            userInput = '';
+                            answer = '' ;
+                            setState(() {
+                              
+                            });
                           }
-                        );
-                        },
-                        ),
-                      ],
+                          ),
+                          MyButton(title: '+/-',
+                          onPress: (){
+                            userInput += '+/-' ;
+                            setState(() {
+                              
+                            });
+                          },
+                          ),
+                          MyButton(title: '%',
+                          onPress: (){
+                            userInput += '%' ;
+                            setState(() {
+                              
+                            });
+                          },
+                          ),
+                          MyButton(title: '/' ,
+                          color: Colors.orange,
+                          onPress: (){
+                            userInput += '/' ;
+                            setState(() {
+                              
+                            }
+                          );
+                          },
+                          ),
+                        ],
+                      ),
                     ),
-                    Row(
-                      children: [
-                        MyButton(title: '7',
-                        onPress: (){
-                          userInput += '7' ;
-                          setState(() {
-                            
-                          });
-                        }
-                        ),
-                        MyButton(title: '8',
-                        onPress: (){
-                          userInput += '8' ;
-                          setState(() {
-                            
-                          });
-                        },
-                        ),
-                        MyButton(title: '0',
-                        onPress: (){
-                          userInput += '0' ;
-                          setState(() {
-                            
-                          });
-                        },
-                        ),
-                        MyButton(title: 'x' ,
-                        onPress: (){
-                          userInput += 'x' ;
-                          setState(() {
-                            
-                          });
-                        },
-                        color: Colors.orange,),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        MyButton(title: '4',
-                        onPress: (){
-                          userInput += '4' ;
-                          setState(() {
-                            
-                          });
-                        }
-                        ),
-                        MyButton(title: '5',
-                        onPress: (){
-                          userInput += '5' ;
-                          setState(() {
-                            
-                          });
-                        },
-                        ),
-                        MyButton(title: '6',
-                        onPress: (){
-                          userInput += '6' ;
-                          setState(() {
-                            
-                          });
-                        },
-                        ),
-                        MyButton(title: '-' ,
-                        onPress: (){
-                          userInput += '-' ;
-                          setState(() {
-                            
-                          });
-                        },
-                        color: Colors.orange,),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        MyButton(title: '1',
-                        onPress: (){
-                          userInput += '1' ;
-                          setState(() {
-                            
-                          });
-                        }
-                        ),
-                        MyButton(title: '2',
-                        onPress: (){
-                          userInput += '2' ;
-                          setState(() {
-                            
-                          });
-                        },
-                        ),
-                        MyButton(title: '3',
-                        onPress: (){
-                          userInput += '3' ;
-                          setState(() {
-                            
-                          });
-                        },
-                        ),
-                        MyButton(title: '+' ,
-                        onPress: (){
-                          userInput += '+' ;
-                          setState(() {
-                            
-                          });
-                        },
-                        color: Colors.orange,),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        MyButton(title: '0',
-                        onPress: (){
-                          userInput += '0' ;
-                          setState(() {
-                            
-                          });
-                        }
-                        ),
-                        MyButton(title: '.',
-                        onPress: (){
-                          userInput += '.' ;
-                          setState(() {
-                            
-                          });
-                        },
-                        ),
-                        MyButton(title: 'DEL',
-                        onPress: (){
-                          if (userInput.isNotEmpty) {
-                          userInput = userInput.substring(0, userInput.length -1 );
+                    Expanded(
+                      child: Row(
+                        children: [
+                          MyButton(title: '7',
+                          onPress: (){
+                            userInput += '7' ;
+                            setState(() {
+                              
+                            });
                           }
-                          setState(() {
-                            
-                          });
-                        },
-                        ),
-                        MyButton(title: '=' ,
-                        onPress: (){
-                          equalPress();
-                          setState(() {
-                            
-                          });
-                        },
-                        color: Colors.orange,),
-                      ],
+                          ),
+                          MyButton(title: '8',
+                          onPress: (){
+                            userInput += '8' ;
+                            setState(() {
+                              
+                            });
+                          },
+                          ),
+                          MyButton(title: '0',
+                          onPress: (){
+                            userInput += '0' ;
+                            setState(() {
+                              
+                            });
+                          },
+                          ),
+                          MyButton(title: 'x' ,
+                          onPress: (){
+                            userInput += 'x' ;
+                            setState(() {
+                              
+                            });
+                          },
+                          color: Colors.orange,),
+                        ],
+                      ),
+                    ),
+                    Expanded(
+                      child: Row(
+                        children: [
+                          MyButton(title: '4',
+                          onPress: (){
+                            userInput += '4' ;
+                            setState(() {
+                              
+                            });
+                          }
+                          ),
+                          MyButton(title: '5',
+                          onPress: (){
+                            userInput += '5' ;
+                            setState(() {
+                              
+                            });
+                          },
+                          ),
+                          MyButton(title: '6',
+                          onPress: (){
+                            userInput += '6' ;
+                            setState(() {
+                              
+                            });
+                          },
+                          ),
+                          MyButton(title: '-' ,
+                          onPress: (){
+                            userInput += '-' ;
+                            setState(() {
+                              
+                            });
+                          },
+                          color: Colors.orange,),
+                        ],
+                      ),
+                    ),
+                    Expanded(
+                      child: Row(
+                        children: [
+                          MyButton(title: '1',
+                          onPress: (){
+                            userInput += '1' ;
+                            setState(() {
+                              
+                            });
+                          }
+                          ),
+                          MyButton(title: '2',
+                          onPress: (){
+                            userInput += '2' ;
+                            setState(() {
+                              
+                            });
+                          },
+                          ),
+                          MyButton(title: '3',
+                          onPress: (){
+                            userInput += '3' ;
+                            setState(() {
+                              
+                            });
+                          },
+                          ),
+                          MyButton(title: '+' ,
+                          onPress: (){
+                            userInput += '+' ;
+                            setState(() {
+                              
+                            });
+                          },
+                          color: Colors.orange,),
+                        ],
+                      ),
+                    ),
+                    Expanded(
+                      child: Row(
+                        children: [
+                          MyButton(title: '0',
+                          onPress: (){
+                            userInput += '0' ;
+                            setState(() {
+                              
+                            });
+                          }
+                          ),
+                          MyButton(title: '.',
+                          onPress: (){
+                            userInput += '.' ;
+                            setState(() {
+                              
+                            });
+                          },
+                          ),
+                          MyButton(title: 'DEL',
+                          onPress: (){
+                            if (userInput.isNotEmpty) {
+                            userInput = userInput.substring(0, userInput.length -1 );
+                            }
+                            setState(() {
+                              
+                            });
+                          },
+                          ),
+                          MyButton(title: '=' ,
+                          onPress: (){
+                            equalPress();
+                            setState(() {
+                              
+                            });
+                          },
+                          color: Colors.orange,),
+                        ],
+                      ),
                     ),
                       ],
                     ),

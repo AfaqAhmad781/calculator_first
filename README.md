@@ -21,4 +21,5 @@ Fixed it by rearranging the widget structure and making Expanded the direct chil
 5) Got a DEL button runtime glitch where pressing DEL on an empty input caused the app to crash.
 Fixed it by checking whether the input was empty before removing the last character.
 6) Got bottom overflow error strange.
-7) Updated README hehehe.  
+7) Bottom overflow fixed, it was issue of Flex and Expanded widgets.
+8) Updated README hehehe.  
