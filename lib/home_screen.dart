@@ -1,6 +1,7 @@
 import 'package:calculator_app_build/components/my_button.dart';
 import 'package:flutter/material.dart';
 import 'package:math_expressions/math_expressions.dart';
+import 'package:flutter/services.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -179,9 +180,9 @@ class _HomeScreenState extends State<HomeScreen> {
                             });
                           },
                           ),
-                          MyButton(title: '0',
+                          MyButton(title: '9',
                           onPress: (){
-                            userInput += '0' ;
+                            userInput += '9' ;
                             setState(() {
                               
                             });
@@ -299,7 +300,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             userInput = userInput.substring(0, userInput.length -1 );
                             }
                             setState(() {
-                              
+                             
                             });
                           },
                           ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class MyButton extends StatelessWidget {
   final String title ;
@@ -17,7 +18,10 @@ class MyButton extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: 12),
         child: InkWell(
           customBorder: const CircleBorder(),
-          onTap: onPress,
+          onTap: () {
+            HapticFeedback.heavyImpact() ;
+            onPress();
+          },
           child: Container(
             height: 80,
             decoration: BoxDecoration(

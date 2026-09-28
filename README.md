@@ -23,3 +23,8 @@ Fixed it by checking whether the input was empty before removing the last charac
 6) Got bottom overflow error strange.
 7) Bottom overflow fixed, it was issue of Flex and Expanded widgets.
 8) Updated README hehehe.  
+9) Vibration effect added.
+
+# More to come
+1) About Screen.
+2) Help Screen.
