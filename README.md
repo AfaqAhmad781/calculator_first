@@ -24,7 +24,11 @@ Fixed it by checking whether the input was empty before removing the last charac
 7) Bottom overflow fixed, it was issue of Flex and Expanded widgets.
 8) Updated README hehehe.  
 9) Vibration effect added.
+10) Added About screen.
+11) Added Clickable links to About Screen.
 
-# More to come
-1) About Screen.
-2) Help Screen.
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone [https://github.com/AfaqAhmad781/calculator_first.git](https://github.com/AfaqAhmad781/calculator_first.git)

@@ -1,6 +1,7 @@
 import 'package:calculator_app_build/components/my_button.dart';
 import 'package:flutter/material.dart';
 import 'package:math_expressions/math_expressions.dart';
+import 'about_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -36,6 +37,16 @@ class _HomeScreenState extends State<HomeScreen> {
   ),
   actions: [
     PopupMenuButton<String>(
+       onSelected: (String value) {
+        if (value == 'About') {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const AboutScreen(),
+      ),
+    );
+    }
+  },
   color: Colors.grey.shade900,
 
   menuPadding: const EdgeInsets.symmetric(vertical: 8),
@@ -43,35 +54,13 @@ class _HomeScreenState extends State<HomeScreen> {
   shape: RoundedRectangleBorder(
     borderRadius: BorderRadius.circular(15),
   ),
-
   elevation: 8,
-
   itemBuilder: (BuildContext context) {
     return const [
       PopupMenuItem(
-        value: 'settings',
-        child: Text(
-          'Settings',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 16,
-          ),
-        ),
-      ),
-      PopupMenuItem(
-        value: 'about',
+        value: 'About',
         child: Text(
           'About',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 16,
-          ),
-        ),
-      ),
-      PopupMenuItem(
-        value: 'help',
-        child: Text(
-          'Help',
           style: TextStyle(
             color: Colors.white,
             fontSize: 16,
